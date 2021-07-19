@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,17 @@
 		5CAB5F1E26A5E1490099FA1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CAB5F1C26A5E1490099FA1F /* Main.storyboard */; };
 		5CAB5F2026A5E14A0099FA1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CAB5F1F26A5E14A0099FA1F /* Assets.xcassets */; };
 		5CAB5F2326A5E14A0099FA1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CAB5F2126A5E14A0099FA1F /* LaunchScreen.storyboard */; };
+		5CAB5F2B26A5E3640099FA1F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB5F2A26A5E3640099FA1F /* HomeViewController.swift */; };
+		5CAB5F2E26A5E51A0099FA1F /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB5F2D26A5E51A0099FA1F /* TabBarItem.swift */; };
+		5CAB5F3026A5E5310099FA1F /* TabBarItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CAB5F2F26A5E5310099FA1F /* TabBarItem.xib */; };
+		5CAB5F3326A5EC010099FA1F /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CAB5F3226A5EC010099FA1F /* CellView.xib */; };
+		5CAB5F3526A5EC0C0099FA1F /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB5F3426A5EC0C0099FA1F /* CellView.swift */; };
+		AE3C86F8B0B08CAC16F978F9 /* Pods_Diia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C5FF68C348ED216BD63C9D /* Pods_Diia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		191F15A7057C4DDFFB8C7F02 /* Pods-Diia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diia.release.xcconfig"; path = "Target Support Files/Pods-Diia/Pods-Diia.release.xcconfig"; sourceTree = "<group>"; };
+		30C5FF68C348ED216BD63C9D /* Pods_Diia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Diia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CAB5F1326A5E1490099FA1F /* Diia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CAB5F1626A5E1490099FA1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CAB5F1826A5E1490099FA1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +32,12 @@
 		5CAB5F1F26A5E14A0099FA1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CAB5F2226A5E14A0099FA1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CAB5F2426A5E14A0099FA1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CAB5F2A26A5E3640099FA1F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5CAB5F2D26A5E51A0099FA1F /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		5CAB5F2F26A5E5310099FA1F /* TabBarItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarItem.xib; sourceTree = "<group>"; };
+		5CAB5F3226A5EC010099FA1F /* CellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
+		5CAB5F3426A5EC0C0099FA1F /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		C7865E3552DFAFD67D220D27 /* Pods-Diia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diia.debug.xcconfig"; path = "Target Support Files/Pods-Diia/Pods-Diia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE3C86F8B0B08CAC16F978F9 /* Pods_Diia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A9F365E208D5097A83BD755 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30C5FF68C348ED216BD63C9D /* Pods_Diia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5CAB5F0A26A5E1490099FA1F = {
 			isa = PBXGroup;
 			children = (
 				5CAB5F1526A5E1490099FA1F /* Diia */,
 				5CAB5F1426A5E1490099FA1F /* Products */,
+				75F7EB6CDDDB9A1956338E95 /* Pods */,
+				4A9F365E208D5097A83BD755 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +81,8 @@
 		5CAB5F1526A5E1490099FA1F /* Diia */ = {
 			isa = PBXGroup;
 			children = (
+				5CAB5F3126A5EBF40099FA1F /* CellView */,
+				5CAB5F2C26A5E5050099FA1F /* TabBarItem */,
 				5CAB5F1626A5E1490099FA1F /* AppDelegate.swift */,
 				5CAB5F1826A5E1490099FA1F /* SceneDelegate.swift */,
 				5CAB5F1A26A5E1490099FA1F /* ViewController.swift */,
@@ -63,8 +90,36 @@
 				5CAB5F1F26A5E14A0099FA1F /* Assets.xcassets */,
 				5CAB5F2126A5E14A0099FA1F /* LaunchScreen.storyboard */,
 				5CAB5F2426A5E14A0099FA1F /* Info.plist */,
+				5CAB5F2A26A5E3640099FA1F /* HomeViewController.swift */,
 			);
 			path = Diia;
+			sourceTree = "<group>";
+		};
+		5CAB5F2C26A5E5050099FA1F /* TabBarItem */ = {
+			isa = PBXGroup;
+			children = (
+				5CAB5F2D26A5E51A0099FA1F /* TabBarItem.swift */,
+				5CAB5F2F26A5E5310099FA1F /* TabBarItem.xib */,
+			);
+			path = TabBarItem;
+			sourceTree = "<group>";
+		};
+		5CAB5F3126A5EBF40099FA1F /* CellView */ = {
+			isa = PBXGroup;
+			children = (
+				5CAB5F3226A5EC010099FA1F /* CellView.xib */,
+				5CAB5F3426A5EC0C0099FA1F /* CellView.swift */,
+			);
+			path = CellView;
+			sourceTree = "<group>";
+		};
+		75F7EB6CDDDB9A1956338E95 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C7865E3552DFAFD67D220D27 /* Pods-Diia.debug.xcconfig */,
+				191F15A7057C4DDFFB8C7F02 /* Pods-Diia.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +129,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5CAB5F2726A5E14A0099FA1F /* Build configuration list for PBXNativeTarget "Diia" */;
 			buildPhases = (
+				13AB7C1A2A446C1759E7855D /* [CP] Check Pods Manifest.lock */,
 				5CAB5F0F26A5E1490099FA1F /* Sources */,
 				5CAB5F1026A5E1490099FA1F /* Frameworks */,
 				5CAB5F1126A5E1490099FA1F /* Resources */,
+				C171899D6F32C99B29A406E0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,13 +181,57 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CAB5F3326A5EC010099FA1F /* CellView.xib in Resources */,
 				5CAB5F2326A5E14A0099FA1F /* LaunchScreen.storyboard in Resources */,
 				5CAB5F2026A5E14A0099FA1F /* Assets.xcassets in Resources */,
+				5CAB5F3026A5E5310099FA1F /* TabBarItem.xib in Resources */,
 				5CAB5F1E26A5E1490099FA1F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		13AB7C1A2A446C1759E7855D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Diia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C171899D6F32C99B29A406E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Diia/Pods-Diia-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Diia/Pods-Diia-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Diia/Pods-Diia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5CAB5F0F26A5E1490099FA1F /* Sources */ = {
@@ -139,7 +240,10 @@
 			files = (
 				5CAB5F1B26A5E1490099FA1F /* ViewController.swift in Sources */,
 				5CAB5F1726A5E1490099FA1F /* AppDelegate.swift in Sources */,
+				5CAB5F3526A5EC0C0099FA1F /* CellView.swift in Sources */,
+				5CAB5F2E26A5E51A0099FA1F /* TabBarItem.swift in Sources */,
 				5CAB5F1926A5E1490099FA1F /* SceneDelegate.swift in Sources */,
+				5CAB5F2B26A5E3640099FA1F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +387,7 @@
 		};
 		5CAB5F2826A5E14A0099FA1F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7865E3552DFAFD67D220D27 /* Pods-Diia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -293,7 +398,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = inch.Diia;
+				PRODUCT_BUNDLE_IDENTIFIER = com.inch.Diia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -302,6 +407,7 @@
 		};
 		5CAB5F2926A5E14A0099FA1F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 191F15A7057C4DDFFB8C7F02 /* Pods-Diia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,7 +418,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = inch.Diia;
+				PRODUCT_BUNDLE_IDENTIFIER = com.inch.Diia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
