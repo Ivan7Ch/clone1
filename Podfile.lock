@@ -1,0 +1,20 @@
+PODS:
+  - MarqueeLabel (4.1.0)
+  - Pastel (0.6.0)
+
+DEPENDENCIES:
+  - MarqueeLabel
+  - Pastel
+
+SPEC REPOS:
+  trunk:
+    - MarqueeLabel
+    - Pastel
+
+SPEC CHECKSUMS:
+  MarqueeLabel: 47ee0c9b3f8da874bb376aef59e8f31c40feaeda
+  Pastel: 814f081efbe2859c37e65ee44f396e6e5be88619
+
+PODFILE CHECKSUM: 0bef2cedc3d989725fe9cde266ac40d74b1c696f
+
+COCOAPODS: 1.10.1
