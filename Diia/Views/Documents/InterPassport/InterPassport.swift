@@ -1,5 +1,5 @@
 //
-//  CellView.swift
+//  InterPassport.swift
 //  Diia
 //
 //  Created by Ivan Chernetskyi on 19.07.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CellView: UIView {
+class InterPassport: UIView {
     
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var profileImageView: UIImageView!
@@ -57,8 +57,8 @@ class CellView: UIView {
     }
     
     func commonInit() {
-        let bundle = Bundle.init(for: CellView.self)
-        if let viewsToAdd = bundle.loadNibNamed("CellView", owner: self, options: nil), let contentView = viewsToAdd.first as? UIView {
+        let bundle = Bundle.init(for: InterPassport.self)
+        if let viewsToAdd = bundle.loadNibNamed("InterPassport", owner: self, options: nil), let contentView = viewsToAdd.first as? UIView {
             addSubview(contentView)
             contentView.frame = self.bounds
             contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]

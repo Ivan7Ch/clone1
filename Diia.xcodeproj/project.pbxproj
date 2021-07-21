@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C9F63AF26A8A388005ED449 /* PasportInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9F63AE26A8A388005ED449 /* PasportInfo.swift */; };
 		5CAB5F1726A5E1490099FA1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB5F1626A5E1490099FA1F /* AppDelegate.swift */; };
 		5CAB5F1926A5E1490099FA1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB5F1826A5E1490099FA1F /* SceneDelegate.swift */; };
 		5CAB5F1B26A5E1490099FA1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB5F1A26A5E1490099FA1F /* ViewController.swift */; };
@@ -16,14 +17,15 @@
 		5CAB5F2B26A5E3640099FA1F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB5F2A26A5E3640099FA1F /* HomeViewController.swift */; };
 		5CAB5F2E26A5E51A0099FA1F /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB5F2D26A5E51A0099FA1F /* TabBarItem.swift */; };
 		5CAB5F3026A5E5310099FA1F /* TabBarItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CAB5F2F26A5E5310099FA1F /* TabBarItem.xib */; };
-		5CAB5F3326A5EC010099FA1F /* CellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CAB5F3226A5EC010099FA1F /* CellView.xib */; };
-		5CAB5F3526A5EC0C0099FA1F /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB5F3426A5EC0C0099FA1F /* CellView.swift */; };
+		5CAB5F3326A5EC010099FA1F /* InterPassport.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CAB5F3226A5EC010099FA1F /* InterPassport.xib */; };
+		5CAB5F3526A5EC0C0099FA1F /* InterPassport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB5F3426A5EC0C0099FA1F /* InterPassport.swift */; };
 		AE3C86F8B0B08CAC16F978F9 /* Pods_Diia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C5FF68C348ED216BD63C9D /* Pods_Diia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		191F15A7057C4DDFFB8C7F02 /* Pods-Diia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diia.release.xcconfig"; path = "Target Support Files/Pods-Diia/Pods-Diia.release.xcconfig"; sourceTree = "<group>"; };
 		30C5FF68C348ED216BD63C9D /* Pods_Diia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Diia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C9F63AE26A8A388005ED449 /* PasportInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasportInfo.swift; sourceTree = "<group>"; };
 		5CAB5F1326A5E1490099FA1F /* Diia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CAB5F1626A5E1490099FA1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CAB5F1826A5E1490099FA1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,8 +37,8 @@
 		5CAB5F2A26A5E3640099FA1F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5CAB5F2D26A5E51A0099FA1F /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		5CAB5F2F26A5E5310099FA1F /* TabBarItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarItem.xib; sourceTree = "<group>"; };
-		5CAB5F3226A5EC010099FA1F /* CellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellView.xib; sourceTree = "<group>"; };
-		5CAB5F3426A5EC0C0099FA1F /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
+		5CAB5F3226A5EC010099FA1F /* InterPassport.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InterPassport.xib; sourceTree = "<group>"; };
+		5CAB5F3426A5EC0C0099FA1F /* InterPassport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterPassport.swift; sourceTree = "<group>"; };
 		C7865E3552DFAFD67D220D27 /* Pods-Diia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diia.debug.xcconfig"; path = "Target Support Files/Pods-Diia/Pods-Diia.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5C9F63B026A8A394005ED449 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C9F63AE26A8A388005ED449 /* PasportInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5C9F63B126A8A3A0005ED449 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				5CAB5F2A26A5E3640099FA1F /* HomeViewController.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		5C9F63B226A8A6D0005ED449 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				5CAB5F3126A5EBF40099FA1F /* InterPassport */,
+			);
+			path = Documents;
+			sourceTree = "<group>";
+		};
+		5C9F63B326A8A786005ED449 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5CAB5F2C26A5E5050099FA1F /* TabBarItem */,
+				5C9F63B226A8A6D0005ED449 /* Documents */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5CAB5F0A26A5E1490099FA1F = {
 			isa = PBXGroup;
 			children = (
@@ -81,8 +116,9 @@
 		5CAB5F1526A5E1490099FA1F /* Diia */ = {
 			isa = PBXGroup;
 			children = (
-				5CAB5F3126A5EBF40099FA1F /* CellView */,
-				5CAB5F2C26A5E5050099FA1F /* TabBarItem */,
+				5C9F63B026A8A394005ED449 /* Models */,
+				5C9F63B326A8A786005ED449 /* Views */,
+				5C9F63B126A8A3A0005ED449 /* Flow */,
 				5CAB5F1626A5E1490099FA1F /* AppDelegate.swift */,
 				5CAB5F1826A5E1490099FA1F /* SceneDelegate.swift */,
 				5CAB5F1A26A5E1490099FA1F /* ViewController.swift */,
@@ -90,7 +126,6 @@
 				5CAB5F1F26A5E14A0099FA1F /* Assets.xcassets */,
 				5CAB5F2126A5E14A0099FA1F /* LaunchScreen.storyboard */,
 				5CAB5F2426A5E14A0099FA1F /* Info.plist */,
-				5CAB5F2A26A5E3640099FA1F /* HomeViewController.swift */,
 			);
 			path = Diia;
 			sourceTree = "<group>";
@@ -104,13 +139,13 @@
 			path = TabBarItem;
 			sourceTree = "<group>";
 		};
-		5CAB5F3126A5EBF40099FA1F /* CellView */ = {
+		5CAB5F3126A5EBF40099FA1F /* InterPassport */ = {
 			isa = PBXGroup;
 			children = (
-				5CAB5F3226A5EC010099FA1F /* CellView.xib */,
-				5CAB5F3426A5EC0C0099FA1F /* CellView.swift */,
+				5CAB5F3226A5EC010099FA1F /* InterPassport.xib */,
+				5CAB5F3426A5EC0C0099FA1F /* InterPassport.swift */,
 			);
-			path = CellView;
+			path = InterPassport;
 			sourceTree = "<group>";
 		};
 		75F7EB6CDDDB9A1956338E95 /* Pods */ = {
@@ -181,7 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CAB5F3326A5EC010099FA1F /* CellView.xib in Resources */,
+				5CAB5F3326A5EC010099FA1F /* InterPassport.xib in Resources */,
 				5CAB5F2326A5E14A0099FA1F /* LaunchScreen.storyboard in Resources */,
 				5CAB5F2026A5E14A0099FA1F /* Assets.xcassets in Resources */,
 				5CAB5F3026A5E5310099FA1F /* TabBarItem.xib in Resources */,
@@ -240,7 +275,8 @@
 			files = (
 				5CAB5F1B26A5E1490099FA1F /* ViewController.swift in Sources */,
 				5CAB5F1726A5E1490099FA1F /* AppDelegate.swift in Sources */,
-				5CAB5F3526A5EC0C0099FA1F /* CellView.swift in Sources */,
+				5CAB5F3526A5EC0C0099FA1F /* InterPassport.swift in Sources */,
+				5C9F63AF26A8A388005ED449 /* PasportInfo.swift in Sources */,
 				5CAB5F2E26A5E51A0099FA1F /* TabBarItem.swift in Sources */,
 				5CAB5F1926A5E1490099FA1F /* SceneDelegate.swift in Sources */,
 				5CAB5F2B26A5E3640099FA1F /* HomeViewController.swift in Sources */,
