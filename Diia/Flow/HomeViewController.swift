@@ -75,16 +75,25 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         
-        let testView = InterPassport()
-        testView.frame = cell.bounds
-        
-        testView.profileImageName = "profileImage"
-        testView.titleText = "Закордонний паспорт"
-        testView.bdayText = "Дата народження:\n07.07.1998"
-        testView.numberText = "Номер:\nFX343615"
-        testView.nameText = "Чернецький Іван Ярославович"
-        
-        cell.addSubview(testView)
+        switch indexPath.row {
+        case 0:
+            let testView = InterPassport()
+            testView.frame = cell.bounds
+
+            testView.profileImageName = "profileImage"
+            testView.titleText = "Закордонний паспорт"
+            testView.bdayText = "Дата народження:\n07.07.1998"
+            testView.numberText = "Номер:\nFX343615"
+            testView.nameText = "Чернецький Іван Ярославович"
+
+            cell.addSubview(testView)
+        case 1:
+            let testView = AddDocument()
+            testView.frame = cell.bounds
+            cell.addSubview(testView)
+        default:
+            break
+        }
         
         return cell
     }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5C9F63AF26A8A388005ED449 /* PasportInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9F63AE26A8A388005ED449 /* PasportInfo.swift */; };
+		5C9F63B726A8F68E005ED449 /* AddDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C9F63B526A8F68E005ED449 /* AddDocument.xib */; };
+		5C9F63B826A8F68E005ED449 /* AddDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9F63B626A8F68E005ED449 /* AddDocument.swift */; };
 		5CAB5F1726A5E1490099FA1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB5F1626A5E1490099FA1F /* AppDelegate.swift */; };
 		5CAB5F1926A5E1490099FA1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB5F1826A5E1490099FA1F /* SceneDelegate.swift */; };
 		5CAB5F1B26A5E1490099FA1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB5F1A26A5E1490099FA1F /* ViewController.swift */; };
@@ -26,6 +28,8 @@
 		191F15A7057C4DDFFB8C7F02 /* Pods-Diia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diia.release.xcconfig"; path = "Target Support Files/Pods-Diia/Pods-Diia.release.xcconfig"; sourceTree = "<group>"; };
 		30C5FF68C348ED216BD63C9D /* Pods_Diia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Diia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C9F63AE26A8A388005ED449 /* PasportInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasportInfo.swift; sourceTree = "<group>"; };
+		5C9F63B526A8F68E005ED449 /* AddDocument.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddDocument.xib; sourceTree = "<group>"; };
+		5C9F63B626A8F68E005ED449 /* AddDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDocument.swift; sourceTree = "<group>"; };
 		5CAB5F1326A5E1490099FA1F /* Diia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CAB5F1626A5E1490099FA1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5CAB5F1826A5E1490099FA1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 		5C9F63B226A8A6D0005ED449 /* Documents */ = {
 			isa = PBXGroup;
 			children = (
+				5C9F63B426A8F660005ED449 /* AddDocument */,
 				5CAB5F3126A5EBF40099FA1F /* InterPassport */,
 			);
 			path = Documents;
@@ -93,6 +98,15 @@
 				5C9F63B226A8A6D0005ED449 /* Documents */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5C9F63B426A8F660005ED449 /* AddDocument */ = {
+			isa = PBXGroup;
+			children = (
+				5C9F63B626A8F68E005ED449 /* AddDocument.swift */,
+				5C9F63B526A8F68E005ED449 /* AddDocument.xib */,
+			);
+			path = AddDocument;
 			sourceTree = "<group>";
 		};
 		5CAB5F0A26A5E1490099FA1F = {
@@ -218,6 +232,7 @@
 			files = (
 				5CAB5F3326A5EC010099FA1F /* InterPassport.xib in Resources */,
 				5CAB5F2326A5E14A0099FA1F /* LaunchScreen.storyboard in Resources */,
+				5C9F63B726A8F68E005ED449 /* AddDocument.xib in Resources */,
 				5CAB5F2026A5E14A0099FA1F /* Assets.xcassets in Resources */,
 				5CAB5F3026A5E5310099FA1F /* TabBarItem.xib in Resources */,
 				5CAB5F1E26A5E1490099FA1F /* Main.storyboard in Resources */,
@@ -277,6 +292,7 @@
 				5CAB5F1726A5E1490099FA1F /* AppDelegate.swift in Sources */,
 				5CAB5F3526A5EC0C0099FA1F /* InterPassport.swift in Sources */,
 				5C9F63AF26A8A388005ED449 /* PasportInfo.swift in Sources */,
+				5C9F63B826A8F68E005ED449 /* AddDocument.swift in Sources */,
 				5CAB5F2E26A5E51A0099FA1F /* TabBarItem.swift in Sources */,
 				5CAB5F1926A5E1490099FA1F /* SceneDelegate.swift in Sources */,
 				5CAB5F2B26A5E3640099FA1F /* HomeViewController.swift in Sources */,
