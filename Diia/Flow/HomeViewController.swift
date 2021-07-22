@@ -7,43 +7,53 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate  {
     
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var centeredView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var pageControl: UIPageControl!
+    
+    let collectionMargin = CGFloat(25)
+    let itemSpacing = CGFloat(18)
+    var itemHeight = CGFloat(457)
+    
+    var itemWidth = CGFloat(0)
+    var currentItem = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        itemHeight = collectionView.bounds.height
+        setup()
+        centeredView.backgroundColor = view.backgroundColor
         configureStackView()
         
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-//            self.addCellView()
-//        })
-        
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
-        centeredView.backgroundColor = view.backgroundColor
-//        centeredView.layer.cornerRadius = 20
-//        centeredView.layer.shadowRadius = 8
-//        centeredView.layer.shadowColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-//        centeredView.layer.shadowOpacity = 0.2
-//        centeredView.layer.shadowOffset = CGSize(width: 0, height: 10)
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    private func addCellView() {
-        let testView = InterPassport()
-        testView.frame = centeredView.frame
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    func setup() {
         
-        testView.profileImageName = "profileImage"
-        testView.titleText = "Закордонний паспорт"
-        testView.bdayText = "Дата народження:\n07.07.1998"
-        testView.numberText = "Номер:\nFX343615"
-        testView.nameText = "Чернецький Іван Ярославович"
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         
-        view.addSubview(testView)
+        itemWidth =  UIScreen.main.bounds.width - collectionMargin * 2.0
+        
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.itemSize = CGSize(width: itemWidth, height: itemHeight)
+        layout.headerReferenceSize = CGSize(width: collectionMargin, height: 0)
+        layout.footerReferenceSize = CGSize(width: collectionMargin, height: 0)
+        
+        layout.minimumLineSpacing = itemSpacing
+        layout.scrollDirection = .horizontal
+        collectionView!.collectionViewLayout = layout
+        collectionView?.decelerationRate = UIScrollView.DecelerationRate.fast
     }
     
     private func configureStackView() {
@@ -66,36 +76,42 @@ class HomeViewController: UIViewController {
 }
 
 
-extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension HomeViewController {
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        3
+        self.pageControl.numberOfPages = 3
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         
         switch indexPath.row {
         case 0:
             let testView = InterPassport()
-            testView.frame = cell.bounds
-
+            testView.frame = CGRect(x: 0, y: 25, width: centeredView.bounds.width, height: centeredView.bounds.height)
+            
             testView.profileImageName = "profileImage"
             testView.titleText = "Закордонний паспорт"
             testView.bdayText = "Дата народження:\n07.07.1998"
             testView.numberText = "Номер:\nFX343615"
-            testView.nameText = "Чернецький Іван Ярославович"
-
+            testView.nameText = "Чернецький\nІван\nЯрославович"
+            
             cell.addSubview(testView)
         case 1:
             let testView = TaxesCode()
-            testView.frame = cell.bounds
+            testView.frame = CGRect(x: 0, y: 25, width: centeredView.bounds.width, height: centeredView.bounds.height)
             testView.nameText = "Чернецький\nІван\nЯрославович"
             testView.bdayText = "Дата народження:\n07.07.1998"
             cell.addSubview(testView)
         case 2:
             let testView = AddDocument()
-            testView.frame = cell.bounds
+            testView.frame = CGRect(x: 0, y: 25, width: centeredView.bounds.width, height: centeredView.bounds.height)
             cell.addSubview(testView)
         default:
             break
@@ -104,8 +120,30 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: centeredView.bounds.width, height: centeredView.bounds.height)
-    }
     
+    // MARK: - UIScrollViewDelegate protocol
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        let pageWidth = Float(itemWidth + itemSpacing)
+        let targetXContentOffset = Float(targetContentOffset.pointee.x)
+        let contentWidth = Float(collectionView!.contentSize.width  )
+        var newPage = Float(self.pageControl.currentPage)
+        
+        if velocity.x == 0 {
+            newPage = floor( (targetXContentOffset - Float(pageWidth) / 2) / Float(pageWidth)) + 1.0
+        } else {
+            newPage = Float(velocity.x > 0 ? self.pageControl.currentPage + 1 : self.pageControl.currentPage - 1)
+            if newPage < 0 {
+                newPage = 0
+            }
+            if (newPage > contentWidth / pageWidth) {
+                newPage = ceil(contentWidth / pageWidth) - 1.0
+            }
+        }
+        
+        self.pageControl.currentPage = Int(newPage)
+        let point = CGPoint (x: CGFloat(newPage * pageWidth), y: targetContentOffset.pointee.y)
+        targetContentOffset.pointee = point
+    }
 }

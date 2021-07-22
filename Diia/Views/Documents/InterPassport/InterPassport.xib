@@ -24,8 +24,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Закордонний паспорт" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLF-6l-kDt">
-                    <rect key="frame" x="5" y="35" width="404" height="33.5"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                    <rect key="frame" x="5" y="26" width="404" height="29"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -33,14 +33,14 @@
                     <rect key="frame" x="20" y="89" width="183" height="408"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Sq-GH-RHW">
-                    <rect key="frame" x="40" y="88.5" width="354" height="18"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <rect key="frame" x="40" y="73" width="354" height="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxx-V6-29f">
-                    <rect key="frame" x="40" y="120.5" width="354" height="18"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <rect key="frame" x="40" y="104" width="354" height="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -51,7 +51,7 @@
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XOo-oX-iMd">
-                    <rect key="frame" x="0.0" y="516.5" width="414" height="25"/>
+                    <rect key="frame" x="0.0" y="523" width="414" height="25"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bY-IP-q0e" customClass="MarqueeLabel" customModule="MarqueeLabel">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="25"/>
@@ -93,8 +93,8 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Закордонний паспорт" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbd-QF-L2R">
-                    <rect key="frame" x="20" y="561.5" width="324" height="33.5"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                    <rect key="frame" x="20" y="568" width="324" height="29"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -110,20 +110,20 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="XOo-oX-iMd" firstAttribute="top" secondItem="L17-Tf-Qk3" secondAttribute="bottom" constant="20" id="1Ue-yg-2MT"/>
+                <constraint firstItem="XOo-oX-iMd" firstAttribute="top" secondItem="L17-Tf-Qk3" secondAttribute="bottom" constant="18" id="1Ue-yg-2MT"/>
                 <constraint firstItem="bxx-V6-29f" firstAttribute="leading" secondItem="7Sq-GH-RHW" secondAttribute="leading" id="6Sc-cc-F4Z"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dIS-Ls-4fi" secondAttribute="trailing" constant="20" id="8eq-Xz-Jsf"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="XOo-oX-iMd" secondAttribute="trailing" id="92t-T9-1EK"/>
                 <constraint firstItem="7Sq-GH-RHW" firstAttribute="top" secondItem="L17-Tf-Qk3" secondAttribute="top" id="9bn-CF-5jJ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="7Sq-GH-RHW" secondAttribute="trailing" constant="20" id="CKF-0v-yM6"/>
-                <constraint firstItem="L17-Tf-Qk3" firstAttribute="top" secondItem="uLF-6l-kDt" secondAttribute="bottom" constant="20" id="GMh-JK-nGm"/>
+                <constraint firstItem="L17-Tf-Qk3" firstAttribute="top" secondItem="uLF-6l-kDt" secondAttribute="bottom" constant="18" id="GMh-JK-nGm"/>
                 <constraint firstItem="Vbd-QF-L2R" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Lso-xr-24A"/>
-                <constraint firstItem="uLF-6l-kDt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="35" id="MaP-za-xNv"/>
+                <constraint firstItem="uLF-6l-kDt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="26" id="MaP-za-xNv"/>
                 <constraint firstItem="bxx-V6-29f" firstAttribute="trailing" secondItem="7Sq-GH-RHW" secondAttribute="trailing" id="Qa1-La-IMP"/>
                 <constraint firstItem="Cv7-X9-ZWo" firstAttribute="leading" secondItem="Vbd-QF-L2R" secondAttribute="trailing" constant="10" id="QkM-15-FAd"/>
                 <constraint firstItem="Vbd-QF-L2R" firstAttribute="top" secondItem="XOo-oX-iMd" secondAttribute="bottom" constant="20" id="T4Q-ta-Zfl"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Cv7-X9-ZWo" secondAttribute="trailing" constant="20" id="UbX-1S-QNd"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Vbd-QF-L2R" secondAttribute="bottom" constant="20" id="WV0-yr-sZI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Vbd-QF-L2R" secondAttribute="bottom" constant="18" id="WV0-yr-sZI"/>
                 <constraint firstItem="dIS-Ls-4fi" firstAttribute="top" secondItem="bxx-V6-29f" secondAttribute="bottom" constant="20" id="bNN-kw-z0m"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="uLF-6l-kDt" secondAttribute="trailing" constant="5" id="dxP-Fa-F3T"/>
                 <constraint firstItem="7Sq-GH-RHW" firstAttribute="leading" secondItem="L17-Tf-Qk3" secondAttribute="trailing" constant="20" id="fs4-44-PY8"/>

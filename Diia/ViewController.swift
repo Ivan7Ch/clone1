@@ -8,30 +8,106 @@
 import UIKit
 import Pastel
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
+
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    let reuseIdentifier = "CustomCell"
+    let collectionMargin = CGFloat(32)
+    let itemSpacing = CGFloat(18)
+    let itemHeight = CGFloat(322)
+    
+    var itemWidth = CGFloat(0)
+    var currentItem = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        addBackground()
+        // Do any additional setup after loading the view, typically from a nib.
+        setup()
+
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    private func addBackground() {
-        let pastelView = PastelView(frame: view.bounds)
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    var items = ["Item 1 ", "Item 2 ", "Item 3 "]
+
+    
+    
+    func setup() {
+//
+//        let bundle = Bundle(for: CustomCollectionViewCell.self)
+//        let nib = UINib(nibName: String(describing: CustomCollectionViewCell.self), bundle:bundle)
+//        self.collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
         
-        pastelView.startPastelPoint = .top
-        pastelView.endPastelPoint = .bottom
-        pastelView.animationDuration = 1.0
         
-        var colors = [#colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1), #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1), #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1), #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)]
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         
-        if self.traitCollection.userInterfaceStyle == .dark {
-            colors = [#colorLiteral(red: 0.2352941176, green: 0.2549019608, blue: 0.2823529412, alpha: 1), #colorLiteral(red: 0.1058823529, green: 0.1490196078, blue: 0.1725490196, alpha: 1), #colorLiteral(red: 0.05882352941, green: 0.2980392157, blue: 0.4588235294, alpha: 1)]
+        itemWidth =  UIScreen.main.bounds.width - collectionMargin * 2.0
+        
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.itemSize = CGSize(width: itemWidth, height: itemHeight)
+        layout.headerReferenceSize = CGSize(width: collectionMargin, height: 0)
+        layout.footerReferenceSize = CGSize(width: collectionMargin, height: 0)
+        
+        layout.minimumLineSpacing = itemSpacing
+        layout.scrollDirection = .horizontal
+        collectionView!.collectionViewLayout = layout
+        collectionView?.decelerationRate = UIScrollView.DecelerationRate.fast
+    
+        
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        self.pageControl.numberOfPages = items.count
+        return items.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        
+        
+        return cell
+    }
+    
+    
+    // MARK: - UIScrollViewDelegate protocol
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        let pageWidth = Float(itemWidth + itemSpacing)
+        let targetXContentOffset = Float(targetContentOffset.pointee.x)
+        let contentWidth = Float(collectionView!.contentSize.width  )
+        var newPage = Float(self.pageControl.currentPage)
+        
+        if velocity.x == 0 {
+            newPage = floor( (targetXContentOffset - Float(pageWidth) / 2) / Float(pageWidth)) + 1.0
+        } else {
+            newPage = Float(velocity.x > 0 ? self.pageControl.currentPage + 1 : self.pageControl.currentPage - 1)
+            if newPage < 0 {
+                newPage = 0
+            }
+            if (newPage > contentWidth / pageWidth) {
+                newPage = ceil(contentWidth / pageWidth) - 1.0
+            }
         }
         
-        pastelView.setColors(colors)
-        pastelView.startAnimation()
-        view.insertSubview(pastelView, at: 0)
+        self.pageControl.currentPage = Int(newPage)
+        let point = CGPoint (x: CGFloat(newPage * pageWidth), y: targetContentOffset.pointee.y)
+        targetContentOffset.pointee = point
     }
+
 }
 
