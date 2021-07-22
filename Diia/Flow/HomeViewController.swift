@@ -69,7 +69,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        2
+        3
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -88,6 +88,12 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
 
             cell.addSubview(testView)
         case 1:
+            let testView = TaxesCode()
+            testView.frame = cell.bounds
+            testView.nameText = "Чернецький\nІван\nЯрославович"
+            testView.bdayText = "Дата народження:\n07.07.1998"
+            cell.addSubview(testView)
+        case 2:
             let testView = AddDocument()
             testView.frame = cell.bounds
             cell.addSubview(testView)

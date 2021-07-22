@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TaxesCode" customModule="Diia" customModuleProvider="target">
+            <connections>
+                <outlet property="bdayLabel" destination="wsb-ef-0GS" id="DoM-EO-NUn"/>
+                <outlet property="codeLabel" destination="ETU-wy-8sY" id="tDq-iK-apc"/>
+                <outlet property="nameLabel" destination="Q6C-RP-iPL" id="EYL-t2-5pm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="331" height="433"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Картка платника податків" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhz-ZY-Lgb">
+                    <rect key="frame" x="20" y="64" width="271" height="60"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="РНОКПП" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ige-2a-rzI">
+                    <rect key="frame" x="20" y="136" width="64" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дата народження: 07.07.1998" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsb-ef-0GS">
+                    <rect key="frame" x="20" y="212" width="291" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Чернецький Іван Ярославович" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6C-RP-iPL">
+                    <rect key="frame" x="20" y="174" width="291" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EID-eh-dHh">
+                    <rect key="frame" x="0.0" y="312" width="331" height="25"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGY-9g-xFR" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                            <rect key="frame" x="0.0" y="0.0" width="331" height="25"/>
+                            <mutableString key="text">РНОКПП дійсний. Перевірео Державною податковою службою      РНОКПП дійсний. Перевірео Державною податковою службою      РНОКПП дійсний. Перевірео Державною податковою службою      РНОКПП дійсний. Перевірео Державною податковою службою      РНОКПП дійсний. Перевірео Державною податковою службою      РНОКПП дійсний. Перевірео Державною податковою службою      РНОКПП дійсний. Перевірео Державною податковою службою      РНОКПП дійсний. Перевірео Державною податковою службою      РНОКПП дійсний. Перевірео Державною податковою службою      РНОКПП дійсний. Перевірео Державною податковою службою      РНОКПП дійсний. Перевірео Державною податковою службою      РНОКПП дійсний. Перевірео Державною податковою службою      РНОКПП дійсний. Перевірео Державною податковою службою      РНОКПП дійсний. Перевірео Державною податковою службою      РНОКПП дійсний. Перевірео Державною податковою службою      РНОКПП дійсний. Перевірео Державною податковою службою      </mutableString>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="scrollRate">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="labelize" value="NO"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="scrollDuration">
+                                    <real key="value" value="90"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="leadingBuffer">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="trailingBuffer">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="fadeLength">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="animationDelay">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="holdScrolling" value="NO"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.50980392159999999" green="0.70196078429999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="sGY-9g-xFR" firstAttribute="top" secondItem="EID-eh-dHh" secondAttribute="top" id="0da-DH-1Rv"/>
+                        <constraint firstItem="sGY-9g-xFR" firstAttribute="leading" secondItem="EID-eh-dHh" secondAttribute="leading" id="AsU-HD-Plw"/>
+                        <constraint firstAttribute="height" constant="25" id="IH3-bq-qTD"/>
+                        <constraint firstAttribute="trailing" secondItem="sGY-9g-xFR" secondAttribute="trailing" id="J28-Le-AuL"/>
+                        <constraint firstAttribute="bottom" secondItem="sGY-9g-xFR" secondAttribute="bottom" id="dJ8-oF-yh9"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3598212699" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETU-wy-8sY">
+                    <rect key="frame" x="20" y="367" width="154" height="36"/>
+                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="26"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doc.on.clipboard" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lzd-f1-Lbe">
+                    <rect key="frame" x="184" y="372.5" width="22" height="25"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="22" id="4Sz-7w-Xco"/>
+                        <constraint firstAttribute="width" secondItem="lzd-f1-Lbe" secondAttribute="height" id="eiL-g1-v4p"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="dhz-ZY-Lgb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="2Jb-ms-eXr"/>
+                <constraint firstItem="EID-eh-dHh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2nj-F5-PmX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wsb-ef-0GS" secondAttribute="trailing" constant="20" id="3PY-Pe-EOW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Q6C-RP-iPL" secondAttribute="trailing" constant="20" id="5ZL-Vu-sF2"/>
+                <constraint firstItem="ETU-wy-8sY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="7dO-vj-OCT"/>
+                <constraint firstAttribute="trailing" secondItem="dhz-ZY-Lgb" secondAttribute="trailing" constant="40" id="BIs-le-ALO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ETU-wy-8sY" secondAttribute="bottom" constant="30" id="GTe-oO-3CM"/>
+                <constraint firstItem="Ige-2a-rzI" firstAttribute="top" secondItem="dhz-ZY-Lgb" secondAttribute="bottom" constant="12" id="Kfa-xv-fmo"/>
+                <constraint firstItem="dhz-ZY-Lgb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="MYo-hF-vm2"/>
+                <constraint firstItem="lzd-f1-Lbe" firstAttribute="leading" secondItem="ETU-wy-8sY" secondAttribute="trailing" constant="10" id="TCy-kb-hkP"/>
+                <constraint firstItem="Ige-2a-rzI" firstAttribute="leading" secondItem="dhz-ZY-Lgb" secondAttribute="leading" id="aSL-QX-R8u"/>
+                <constraint firstItem="lzd-f1-Lbe" firstAttribute="centerY" secondItem="ETU-wy-8sY" secondAttribute="centerY" id="aba-ps-4ql"/>
+                <constraint firstItem="ETU-wy-8sY" firstAttribute="top" secondItem="EID-eh-dHh" secondAttribute="bottom" constant="30" id="cN6-gf-ikl"/>
+                <constraint firstItem="Q6C-RP-iPL" firstAttribute="leading" secondItem="Ige-2a-rzI" secondAttribute="leading" id="fQk-Bd-Q2m"/>
+                <constraint firstItem="EID-eh-dHh" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="gVD-47-Vez"/>
+                <constraint firstItem="wsb-ef-0GS" firstAttribute="top" secondItem="Q6C-RP-iPL" secondAttribute="bottom" constant="20" id="oNc-Df-7CW"/>
+                <constraint firstItem="wsb-ef-0GS" firstAttribute="leading" secondItem="Q6C-RP-iPL" secondAttribute="leading" id="qhz-C0-5T2"/>
+                <constraint firstItem="Q6C-RP-iPL" firstAttribute="top" secondItem="Ige-2a-rzI" secondAttribute="bottom" constant="20" id="v7k-sj-zK5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="77.536231884057983" y="-28.459821428571427"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="sGY-9g-xFR">
+            <size key="intrinsicContentSize" width="7831" height="18"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="doc.on.clipboard" catalog="system" width="116" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
