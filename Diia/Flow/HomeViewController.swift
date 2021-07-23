@@ -28,15 +28,11 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         centeredView.backgroundColor = view.backgroundColor
         configureStackView()
         
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadViews), name: Notification.Name("reloadViews"), object: nil)
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    @IBAction func reloadViews() {
+        collectionView.reloadData()
     }
     
     func setup() {
@@ -98,16 +94,24 @@ extension HomeViewController {
             
             testView.profileImageName = "profileImage"
             testView.titleText = "Закордонний паспорт"
-            testView.bdayText = "Дата народження:\n07.07.1998"
+            let bday = UserDefaults.standard.string(forKey: "bday") ?? "07.08.2021"
+            testView.bdayText = "Дата народження:\n\(bday)"
             testView.numberText = "Номер:\nFX343615"
-            testView.nameText = "Чернецький\nІван\nЯрославович"
+            let name = UserDefaults.standard.string(forKey: "name") ?? "Іван"
+            let lastName = UserDefaults.standard.string(forKey: "lastName") ?? "Іванович"
+            let surname = UserDefaults.standard.string(forKey: "surname") ?? "Іваненко"
+            testView.nameText = "\(surname)\n\(name)\n\(lastName)"
             
             cell.addSubview(testView)
         case 1:
             let testView = TaxesCode()
             testView.frame = CGRect(x: 0, y: 25, width: centeredView.bounds.width, height: centeredView.bounds.height)
-            testView.nameText = "Чернецький\nІван\nЯрославович"
-            testView.bdayText = "Дата народження:\n07.07.1998"
+            let name = UserDefaults.standard.string(forKey: "name") ?? "Іван"
+            let lastName = UserDefaults.standard.string(forKey: "lastName") ?? "Іванович"
+            let surname = UserDefaults.standard.string(forKey: "surname") ?? "Іваненко"
+            testView.nameText = "\(surname)\n\(name)\n\(lastName)"
+            let bday = UserDefaults.standard.string(forKey: "bday") ?? "07.08.2021"
+            testView.bdayText = "Дата народження:\n\(bday)"
             cell.addSubview(testView)
         case 2:
             let testView = AddDocument()
@@ -118,6 +122,10 @@ extension HomeViewController {
         }
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
     
     

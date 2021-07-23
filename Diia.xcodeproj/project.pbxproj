@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C2DEE6926AB3798006D0D45 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2DEE6826AB3798006D0D45 /* SetupViewController.swift */; };
 		5C8909D526A93E8B000AE0B7 /* TaxesCode.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8909D326A93E8B000AE0B7 /* TaxesCode.xib */; };
 		5C8909D626A93E8B000AE0B7 /* TaxesCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8909D426A93E8B000AE0B7 /* TaxesCode.swift */; };
 		5C9F63AF26A8A388005ED449 /* PasportInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9F63AE26A8A388005ED449 /* PasportInfo.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		191F15A7057C4DDFFB8C7F02 /* Pods-Diia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diia.release.xcconfig"; path = "Target Support Files/Pods-Diia/Pods-Diia.release.xcconfig"; sourceTree = "<group>"; };
 		30C5FF68C348ED216BD63C9D /* Pods_Diia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Diia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C2DEE6826AB3798006D0D45 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		5C8909D326A93E8B000AE0B7 /* TaxesCode.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaxesCode.xib; sourceTree = "<group>"; };
 		5C8909D426A93E8B000AE0B7 /* TaxesCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxesCode.swift; sourceTree = "<group>"; };
 		5C9F63AE26A8A388005ED449 /* PasportInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasportInfo.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				5CAB5F2A26A5E3640099FA1F /* HomeViewController.swift */,
+				5C2DEE6826AB3798006D0D45 /* SetupViewController.swift */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				5CAB5F1726A5E1490099FA1F /* AppDelegate.swift in Sources */,
 				5CAB5F3526A5EC0C0099FA1F /* InterPassport.swift in Sources */,
 				5C9F63AF26A8A388005ED449 /* PasportInfo.swift in Sources */,
+				5C2DEE6926AB3798006D0D45 /* SetupViewController.swift in Sources */,
 				5C9F63B826A8F68E005ED449 /* AddDocument.swift in Sources */,
 				5C8909D626A93E8B000AE0B7 /* TaxesCode.swift in Sources */,
 				5CAB5F2E26A5E51A0099FA1F /* TabBarItem.swift in Sources */,
