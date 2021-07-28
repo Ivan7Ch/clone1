@@ -96,7 +96,7 @@ extension HomeViewController {
             testView.profileImageName = "profileImage"
             testView.titleText = "Закордонний паспорт"
             testView.bdayText = Person.current.formattedBDay
-            testView.numberText = "Номер:\nFX343615"
+            testView.numberText = "Номер:\nQS142010"
             testView.nameText = Person.current.formattedFullName
             
             cell.contentView.addSubview(testView)
@@ -118,7 +118,11 @@ extension HomeViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) else { return }
         
+        let subView = QRCodeCheck()
+        subView.frame = CGRect(x: 0, y: 0, width: centeredView.bounds.width, height: centeredView.bounds.height)
+        cell.addSubview(subView)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

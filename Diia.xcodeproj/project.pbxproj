@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5C2DEE6926AB3798006D0D45 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2DEE6826AB3798006D0D45 /* SetupViewController.swift */; };
+		5C85850126B1D40600E0C3A8 /* QRCodeCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C85850026B1D40600E0C3A8 /* QRCodeCheck.swift */; };
+		5C85850326B1D40C00E0C3A8 /* QRCodeCheck.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C85850226B1D40C00E0C3A8 /* QRCodeCheck.xib */; };
 		5C8909D526A93E8B000AE0B7 /* TaxesCode.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8909D326A93E8B000AE0B7 /* TaxesCode.xib */; };
 		5C8909D626A93E8B000AE0B7 /* TaxesCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8909D426A93E8B000AE0B7 /* TaxesCode.swift */; };
 		5C9F63AF26A8A388005ED449 /* PassportInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9F63AE26A8A388005ED449 /* PassportInfo.swift */; };
@@ -31,6 +33,8 @@
 		191F15A7057C4DDFFB8C7F02 /* Pods-Diia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diia.release.xcconfig"; path = "Target Support Files/Pods-Diia/Pods-Diia.release.xcconfig"; sourceTree = "<group>"; };
 		30C5FF68C348ED216BD63C9D /* Pods_Diia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Diia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2DEE6826AB3798006D0D45 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		5C85850026B1D40600E0C3A8 /* QRCodeCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeCheck.swift; sourceTree = "<group>"; };
+		5C85850226B1D40C00E0C3A8 /* QRCodeCheck.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QRCodeCheck.xib; sourceTree = "<group>"; };
 		5C8909D326A93E8B000AE0B7 /* TaxesCode.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaxesCode.xib; sourceTree = "<group>"; };
 		5C8909D426A93E8B000AE0B7 /* TaxesCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxesCode.swift; sourceTree = "<group>"; };
 		5C9F63AE26A8A388005ED449 /* PassportInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportInfo.swift; sourceTree = "<group>"; };
@@ -72,6 +76,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5C8584FF26B1D3F100E0C3A8 /* QRCodeCheck */ = {
+			isa = PBXGroup;
+			children = (
+				5C85850026B1D40600E0C3A8 /* QRCodeCheck.swift */,
+				5C85850226B1D40C00E0C3A8 /* QRCodeCheck.xib */,
+			);
+			path = QRCodeCheck;
+			sourceTree = "<group>";
+		};
 		5C8909D226A93E61000AE0B7 /* TaxesCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +114,7 @@
 		5C9F63B226A8A6D0005ED449 /* Documents */ = {
 			isa = PBXGroup;
 			children = (
+				5C8584FF26B1D3F100E0C3A8 /* QRCodeCheck */,
 				5C8909D226A93E61000AE0B7 /* TaxesCode */,
 				5C9F63B426A8F660005ED449 /* AddDocument */,
 				5CAB5F3126A5EBF40099FA1F /* InterPassport */,
@@ -251,6 +265,7 @@
 				5C8909D526A93E8B000AE0B7 /* TaxesCode.xib in Resources */,
 				5CAB5F2326A5E14A0099FA1F /* LaunchScreen.storyboard in Resources */,
 				5C9F63B726A8F68E005ED449 /* AddDocument.xib in Resources */,
+				5C85850326B1D40C00E0C3A8 /* QRCodeCheck.xib in Resources */,
 				5CAB5F2026A5E14A0099FA1F /* Assets.xcassets in Resources */,
 				5CAB5F3026A5E5310099FA1F /* TabBarItem.xib in Resources */,
 				5CAB5F1E26A5E1490099FA1F /* Main.storyboard in Resources */,
@@ -306,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C85850126B1D40600E0C3A8 /* QRCodeCheck.swift in Sources */,
 				5CAB5F1B26A5E1490099FA1F /* ViewController.swift in Sources */,
 				5CAB5F1726A5E1490099FA1F /* AppDelegate.swift in Sources */,
 				5CAB5F3526A5EC0C0099FA1F /* InterPassport.swift in Sources */,
