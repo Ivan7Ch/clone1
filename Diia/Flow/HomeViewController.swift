@@ -23,7 +23,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        itemHeight = collectionView.bounds.height
+        itemHeight = centeredView.bounds.height
         setup()
         centeredView.backgroundColor = view.backgroundColor
         configureStackView()
@@ -86,11 +86,12 @@ extension HomeViewController {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        let frame = CGRect(x: 0, y: 0, width: centeredView.bounds.width, height: centeredView.bounds.height)
         
         switch indexPath.row {
         case 0:
             let testView = InterPassport()
-            testView.frame = CGRect(x: 0, y: 25, width: centeredView.bounds.width, height: centeredView.bounds.height)
+            testView.frame = frame
             
             testView.profileImageName = "profileImage"
             testView.titleText = "Закордонний паспорт"
@@ -102,10 +103,10 @@ extension HomeViewController {
             let surname = UserDefaults.standard.string(forKey: "surname") ?? "Іваненко"
             testView.nameText = "\(surname)\n\(name)\n\(lastName)"
             
-            cell.addSubview(testView)
+            cell.contentView.addSubview(testView)
         case 1:
             let testView = TaxesCode()
-            testView.frame = CGRect(x: 0, y: 25, width: centeredView.bounds.width, height: centeredView.bounds.height)
+            testView.frame = frame
             let name = UserDefaults.standard.string(forKey: "name") ?? "Іван"
             let lastName = UserDefaults.standard.string(forKey: "lastName") ?? "Іванович"
             let surname = UserDefaults.standard.string(forKey: "surname") ?? "Іваненко"
@@ -115,7 +116,7 @@ extension HomeViewController {
             cell.addSubview(testView)
         case 2:
             let testView = AddDocument()
-            testView.frame = CGRect(x: 0, y: 25, width: centeredView.bounds.width, height: centeredView.bounds.height)
+            testView.frame = frame
             cell.addSubview(testView)
         default:
             break
@@ -126,6 +127,10 @@ extension HomeViewController {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: centeredView.bounds.width, height: centeredView.bounds.height)
     }
     
     
