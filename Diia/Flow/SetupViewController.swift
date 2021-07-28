@@ -22,10 +22,10 @@ class SetupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        name = UserDefaults.standard.string(forKey: "name") ?? "Іван"
-        lastName = UserDefaults.standard.string(forKey: "lastName") ?? "Іванович"
-        surname = UserDefaults.standard.string(forKey: "surname") ?? "Іваненко"
-        bday = UserDefaults.standard.string(forKey: "bday") ?? "07.08.2021"
+        name = Person.current.name
+        lastName = Person.current.lastName
+        surname = Person.current.surname
+        bday =  Person.current.bday
         
         nameTextField.text = name
         lastNameTextField.text = lastName
@@ -39,10 +39,7 @@ class SetupViewController: UIViewController {
     }
     
     @IBAction func saveButtonAction() {
-        UserDefaults.standard.set(name, forKey: "name")
-        UserDefaults.standard.set(lastName, forKey: "lastName")
-        UserDefaults.standard.set(surname, forKey: "surname")
-        UserDefaults.standard.set(bday, forKey: "bday")
+        Person.current = Person(name: name, lastName: lastName, surname: surname, bday: bday)
         NotificationCenter.default.post(name: Notification.Name("reloadViews"), object: nil)
         dismiss(animated: true, completion: nil)
     }

@@ -95,24 +95,16 @@ extension HomeViewController {
             
             testView.profileImageName = "profileImage"
             testView.titleText = "Закордонний паспорт"
-            let bday = UserDefaults.standard.string(forKey: "bday") ?? "07.08.2021"
-            testView.bdayText = "Дата народження:\n\(bday)"
+            testView.bdayText = Person.current.formattedBDay
             testView.numberText = "Номер:\nFX343615"
-            let name = UserDefaults.standard.string(forKey: "name") ?? "Іван"
-            let lastName = UserDefaults.standard.string(forKey: "lastName") ?? "Іванович"
-            let surname = UserDefaults.standard.string(forKey: "surname") ?? "Іваненко"
-            testView.nameText = "\(surname)\n\(name)\n\(lastName)"
+            testView.nameText = Person.current.formattedFullName
             
             cell.contentView.addSubview(testView)
         case 1:
             let testView = TaxesCode()
             testView.frame = frame
-            let name = UserDefaults.standard.string(forKey: "name") ?? "Іван"
-            let lastName = UserDefaults.standard.string(forKey: "lastName") ?? "Іванович"
-            let surname = UserDefaults.standard.string(forKey: "surname") ?? "Іваненко"
-            testView.nameText = "\(surname)\n\(name)\n\(lastName)"
-            let bday = UserDefaults.standard.string(forKey: "bday") ?? "07.08.2021"
-            testView.bdayText = "Дата народження:\n\(bday)"
+            testView.nameText = Person.current.formattedFullName
+            testView.bdayText = Person.current.formattedBDay
             cell.addSubview(testView)
         case 2:
             let testView = AddDocument()

@@ -10,7 +10,7 @@
 		5C2DEE6926AB3798006D0D45 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2DEE6826AB3798006D0D45 /* SetupViewController.swift */; };
 		5C8909D526A93E8B000AE0B7 /* TaxesCode.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8909D326A93E8B000AE0B7 /* TaxesCode.xib */; };
 		5C8909D626A93E8B000AE0B7 /* TaxesCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8909D426A93E8B000AE0B7 /* TaxesCode.swift */; };
-		5C9F63AF26A8A388005ED449 /* PasportInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9F63AE26A8A388005ED449 /* PasportInfo.swift */; };
+		5C9F63AF26A8A388005ED449 /* PassportInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9F63AE26A8A388005ED449 /* PassportInfo.swift */; };
 		5C9F63B726A8F68E005ED449 /* AddDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C9F63B526A8F68E005ED449 /* AddDocument.xib */; };
 		5C9F63B826A8F68E005ED449 /* AddDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9F63B626A8F68E005ED449 /* AddDocument.swift */; };
 		5CAB5F1726A5E1490099FA1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CAB5F1626A5E1490099FA1F /* AppDelegate.swift */; };
@@ -33,7 +33,7 @@
 		5C2DEE6826AB3798006D0D45 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		5C8909D326A93E8B000AE0B7 /* TaxesCode.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TaxesCode.xib; sourceTree = "<group>"; };
 		5C8909D426A93E8B000AE0B7 /* TaxesCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaxesCode.swift; sourceTree = "<group>"; };
-		5C9F63AE26A8A388005ED449 /* PasportInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasportInfo.swift; sourceTree = "<group>"; };
+		5C9F63AE26A8A388005ED449 /* PassportInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassportInfo.swift; sourceTree = "<group>"; };
 		5C9F63B526A8F68E005ED449 /* AddDocument.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddDocument.xib; sourceTree = "<group>"; };
 		5C9F63B626A8F68E005ED449 /* AddDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDocument.swift; sourceTree = "<group>"; };
 		5CAB5F1326A5E1490099FA1F /* Diia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,7 +84,7 @@
 		5C9F63B026A8A394005ED449 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5C9F63AE26A8A388005ED449 /* PasportInfo.swift */,
+				5C9F63AE26A8A388005ED449 /* PassportInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -309,7 +309,7 @@
 				5CAB5F1B26A5E1490099FA1F /* ViewController.swift in Sources */,
 				5CAB5F1726A5E1490099FA1F /* AppDelegate.swift in Sources */,
 				5CAB5F3526A5EC0C0099FA1F /* InterPassport.swift in Sources */,
-				5C9F63AF26A8A388005ED449 /* PasportInfo.swift in Sources */,
+				5C9F63AF26A8A388005ED449 /* PassportInfo.swift in Sources */,
 				5C2DEE6926AB3798006D0D45 /* SetupViewController.swift in Sources */,
 				5C9F63B826A8F68E005ED449 /* AddDocument.swift in Sources */,
 				5C8909D626A93E8B000AE0B7 /* TaxesCode.swift in Sources */,
